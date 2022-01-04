@@ -5,6 +5,7 @@ const Home = () => {
     return (
         <>
             <img src={puzzle} alt={"puzzle"} />
+            <p className="text-white">Run Dirbuster on me!</p>
         </>
     );
 };
