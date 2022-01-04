@@ -57,3 +57,6 @@ Completed the first chapter of the CTF. Got started with learning Burp Suite for
 
 #### 1.3.22 Justin Kim
 Fixed errors found in the prepared process for the first chapter of the CTF. Began the presentations for the second half of the CTF. 
+
+#### 1.3.22 Ethan Shan
+Remade netlify, fixing deployment to production issues.
