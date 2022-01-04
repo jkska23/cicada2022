@@ -1,5 +1,5 @@
 import React from 'react';
-import puzzle from "../assets/original.jpeg";
+import puzzle from "../assets/cicada.jpg";
 
 const Home = () => {
     return (
