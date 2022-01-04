@@ -4,15 +4,17 @@ const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [loginSuccess, setLoginSuccess] = useState(false);
+    const [incorrect, setIncorrect] = useState(false);
 
     const handleSubmit = () => {
       if (!username || !password) {
           console.log('missing fields');
       }  else {
-          if (username === 'test' && password === 'pass') {
+          if (username === 'admin' && password === 'pass') {
+              setIncorrect(false);
               setLoginSuccess(true);
           } else {
-              console.log('incorrect username or password')
+              setIncorrect(true);
           }
       }
     };
@@ -22,12 +24,16 @@ const Login = () => {
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96">
                 {loginSuccess ? (
                     <p>
-                        Congratulations on reaching the final chapter of Cicada2022! We have one more set of problems,
-                        but you must wait until tomorrow’s presentation to complete the CTF… or not! Find a tool that
-                        can help you finish!
+                        Congratulations on completing Cicada2022! You won't be selected as an elite hacker to work for a secret agency, but you'll get the gratification of earning nothing. Yes, that was it. The journey. That's all you get. Pain. Death.
                     </p>
                 ) : (
                     <>
+                        <p>
+                            Congratulations on reaching the final chapter of Cicada2022! We have one more set of problems,
+                            but you must wait until tomorrow’s presentation to complete the CTF… or not! Find a tool that
+                            can help you finish!
+                        </p>
+                        <br/>
                         <div className="mb-2">
                             <label className="block text-sm font-medium text-gray-700">
                                 Username
@@ -66,6 +72,16 @@ const Login = () => {
                                 Sign in
                             </button>
                         </div>
+                        {incorrect ? (
+                            <>
+                                <br/>
+                                <p className="text-red-500">
+                                    Incorrect Username or Password
+                                </p>
+                            </>
+                        ) : (
+                            <></>
+                        )}
                     </>
                 )}
             </div>
